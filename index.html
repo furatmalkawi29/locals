@@ -34,253 +34,46 @@
 
         <section class="sudo-main">
 
-          <h1>Car Specifications</h1>
+          <h1>Car History</h1>
 
           <div>
             <p><%=data.vin %></p>
-            <button type="submit">Add to Garage</button>
-
           </div>
 
-          <section class="tables">
+          <section class="tables">  
           <table>
             <tr>
-              <th>Model</th>
-              <td> <%= data.model %> <%= data.year %></td>
+              <th>Odometer Reading</th>
+              <td> <%= report.odometer %> <%= report.odometerUnit %></td>
             </tr>
             
 
             <tr>
-              <th>manufacturer</th>
-              <td><%= data.madeIn %> <%= data.make %></td>
+              <th>Status</th>
+              <td><%= report.status %></td>
             </tr>
 
             <tr>
-              <th>Transmission</th>
-              <td><%= data.transmission%></td>
+              <th>Reporting Company</th>
+              <td><%= report.reportingCompany %></td>
             </tr>
 
             <tr>
-              <th>Suggested Price</th>
-              <td><%= data.price %></td>
+              <th>Last Insurance Company</th>
+              <td><%= report.insurance%></td>
             </tr>
 
             <tr>
-              <th>Car Body</th>
-              <td><%= data.style %></td>
-            </tr>
-            
-            <tr>
-              <th>Number Of Seats</th>
-              <td>data.seats</td>
-            </tr>
-
-            <tr>
-              <th>Child Safety Door Locks</th>
-
-              <td><%= data.child_safety_door_locks %></td>
-            </tr>
-
-            <tr>
-              <th>CD Player</th>
-
-              <td><%= data.cd_player %></td>
-            </tr>
-
-            <tr>
-              <th>Heated Exterior Mirrors</th>
-              <td><%= data.heated_exterior_mirror %></td>
+              <th><%=report.insurance%> Email</th>
+              <td><%= report.insuranceEmail %></td>
             </tr>
             
             <tr>
-              <th>Airbag</th>
-              <td><%= data.driverAirbag %></td>
+              <th><%=report.insurance%> Phone</th>
+              <td><%= report.insurancePhone %></td>
             </tr>
 
-            
-            <tr>
-              <th>Parking Aid</th>
-              <td><%= data.parkingAid %></td>
-            </tr>
-
-            <tr>
-              <th>Cruise Control</th>
-              <td><%= data.cruise_control %></td>
-            </tr>
-
-            <tr>
-              <th>Fog Lights</th>
-              <td><%= data.fogLights %></td>
-            </tr>
-
-            <tr>
-              <th>Heated Seats</th>
-              <td><%= data.heated_seat %></td>
-            </tr>
-
-            <tr>
-              <th>navigation aid</th>
-              <td><%= data.navigation_aid %></td>
-            </tr>
-
-            <tr>
-              <th>Keyless Entry</th>
-              <td><%= data.keyless_entry %> </td>
-          </tr>
           </table>
-
-          <form action="/myCars" method="POST">
-            <input name="vin" value="<%=data.vin %>" class="hidden" />
-
-            <input name="make" value="<%= data.make %>" class="hidden" />
-
-            <input name="model" value="<%= data.model %>" class="hidden" />
-
-            <input name="year" value="<%= data.year %>" class="hidden" />
-
-            <input name="price" value="<%= data.price %>" class="hidden" />
-
-            <input name="seats" value="<%= data.seats %>" class="hidden" />
-
-            <input name="style" value="<%= data.style %>" class="hidden" />
-
-            <input name="engine" value="<%= data.engine%>" class="hidden" />
-
-            <input name="madeIn" value="<%= data.madeIn %>" class="hidden" />
-
-            <input
-              name="fuelCapacity"
-              value="<%= data.fuelCapacity %>"
-              class="hidden"
-            />
-
-            <input
-              name="fuelInternal"
-              value="<%= data.fuelInternal %>"
-              class="hidden"
-            />
-
-            <input
-              name="fuelExternal"
-              value="<%= data.fuelExternal %>"
-              class="hidden"
-            />
-
-            <input
-              name="transmission"
-              value="<%= data.transmission%>"
-              class="hidden"
-            />
-
-            <input
-              name="alloy_wheels"
-              value="<%= data.alloy_wheels %>"
-              class="hidden"
-            />
-
-            <input
-              name="automatic_headlights"
-              value="<%= data.automatic_headlights %>"
-              class="hidden"
-            />
-
-            <input
-              name="cd_player"
-              value="<%= data.cd_player %>"
-              class="hidden"
-            />
-
-            <input
-              name="child_safety_door_locks"
-              value="<%= data.child_safety_door_locks %>"
-              class="hidden"
-            />
-
-            <input
-              name="fogLights"
-              value="<%= data.fogLights %>"
-              class="hidden"
-            />
-
-            <input
-              name="cruise_control"
-              value="<%= data.cruise_control %>"
-              class="hidden"
-            />
-
-            <input
-              name="driverAirbag"
-              value="<%= data.driverAirbag %>"
-              class="hidden"
-            />
-
-            <input
-              name="passenger_airbag"
-              value="<% data.passenger_airbag %>"
-              class="hidden"
-            />
-
-            <input
-              name="cooled_seat"
-              value="<%= data.cooled_seat %>"
-              class="hidden"
-            />
-
-            <input
-              name="heated_seat"
-              value="<%= data.heated_seat %>"
-              class="hidden"
-            />
-
-            <input
-              name="parkingAid"
-              value="<%= data.parkingAid %>"
-              class="hidden"
-            />
-
-            <input
-              name="genuine_wood_trim"
-              value="<%= data.genuine_wood_trim %>"
-              class="hidden"
-            />
-
-            <input
-              name="heated_exterior_mirror"
-              value="<%= data.heated_exterior_mirror %>"
-              class="hidden"
-            />
-
-            <input
-              name="heated_steering_wheel"
-              value="<%= data.heated_steering_wheel %>"
-              class="hidden"
-            />
-
-            <input
-              name="keyless_entry"
-              value="<%= data.keyless_entry %>"
-              class="hidden"
-            />
-
-            <input
-              name="leather_seat"
-              value="<%= data.leather_seat %>"
-              class="hidden"
-            />
-
-            <input
-              name="navigation_aid"
-              value="<%= data.navigation_aid %>"
-              class="hidden"
-            />
-
-            <input
-              name="power_windows"
-              value="<%= data.power_windows %>"
-              class="hidden"
-            />
-
-          </form>
         </section>
         </section>
         
@@ -384,8 +177,6 @@
           <span>Fuel Capacity</span> <br />
           24.00 gallon
         </p>
-
-        <h3>Bentley Continental GT</h3>
       </section>
     </main>
 
