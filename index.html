@@ -1,166 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="base.css">
-  <title>Document</title>
-</head>
-
-
-<body>
-  <!-- -----------------------------header -->
-<header>
-  <img src="logo.png">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Car Search</a>
-    <a href="#">OBD</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-
-<main>
-<!-- ----------------------------- hero -->
-
-<section class="hero"> 
-<h1>MotoDial</h1>
-<h2>The best way to get vehicle  
-  <div id="container">
-	<div id="text"></div>
-  </div></h2>
-</section>
-
-<img class="tri" src="ok.png">
-
-<!-- -----------------------------main content -->
-<section class="suduMain">
-
-<!-- ---------------------- What services does MoroDial Provide you? -->
-
-<section class="motoDial_Info">
-  <article>
-<p> Let's Introduce MotoDial </p>
-<p>Car owner's first tools to provide vehicle specs, market value, history and more! . We provide you information that are hard to get in the most simple, efficient, elegent way possible . The possibilities are endless. From tracking vehicle analytics in your company, energy, insurance, media, ride hailing </p>
-</article>
-<img src="blue car.png" alt="">
-
-</section>
-
-
-<section class="features">
-  <div class="background-sec">
-    <p>Our services</p>
-    <div class="icons">
-
-
-<div class="card">
-  <div class="heading">
-  <div><img src="spec.png" alt=""></div>
-  <p>VEHICLE SPEC</p>
-</div>
-
-  <p>Get robust vehicle specification data on color options, attributes, equipment details, recall information, warranties</p>
-  <button><a href="">Start</a></button>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="spec.css" />
+    <title>Document</title>
+  </head>
 
 
 
-<div class="card">
-  <div class="heading">
-  <div><img src="history.png" alt=""></div>
-  <p>VEHICLE HISTORY</p>
-</div>
+  <body>
+    <main>
+      <img class="car" src="images2/boghati5.png" />
 
-  <p>Get access to a comprehensive set of history records for used and new cars by VIN based on sales data stored in database. </p>
-  <button><a href="history.html">Start</a></button>
-</div>
+      <section class="content">
 
+        <header>
+          <img src="logo.png" />
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Car Search</a>
+            <a href="#">OBD</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
 
+        <section class="sudo-main">
 
-<div class="card">
-  <div class="heading">
-  <div><img src="obd.png" alt=""></div>
-  <p>OBD DIAGNOSIS</p>
-</div>
+          <h1>Car Specifications</h1>
 
-  <p> We provide you with a system that reports diagnostic trouble codes, efficiantly rising up the issue using your OBD code . </p>
-  <button><a href="">Start</a></button>
-</div>
+          <div>
+            <p><%=data.vin %></p>
+            <button type="submit">Add to Garage</button>
 
+          </div>
 
+          <section class="tables">
+          <table>
+            <tr>
+              <th>Model</th>
+              <td> <%= data.model %> <%= data.year %></td>
+            </tr>
+            
 
+            <tr>
+              <th>manufacturer</th>
+              <td><%= data.madeIn %> <%= data.make %></td>
+            </tr>
 
-<div class="card">
-  <div class="heading">
-  <div><img src="map.png" alt=""></div>
-  <p> SERVICE STATIONS</p>
-  </div>
+            <tr>
+              <th>Transmission</th>
+              <td><%= data.transmission%></td>
+            </tr>
 
-  <p>You can look for the best nearby car services stations by just providing your location.  .</p>
-  <button><a href="">Start</a></button>
-</div>
+            <tr>
+              <th>Suggested Price</th>
+              <td><%= data.price %></td>
+            </tr>
 
+            <tr>
+              <th>Car Body</th>
+              <td><%= data.style %></td>
+            </tr>
+            
+            <tr>
+              <th>Number Of Seats</th>
+              <td>data.seats</td>
+            </tr>
 
-    </div>
-  </div>
-</section> 
+            <tr>
+              <th>Child Safety Door Locks</th>
 
+              <td><%= data.child_safety_door_locks %></td>
+            </tr>
 
-<!-- <section class="vedio">
-    <video width=100% height="1000" autoplay muted loop>
-        <source src="assets/welcometojordan.webm">
-    </video>
-</section>
- -->
+            <tr>
+              <th>CD Player</th>
 
+              <td><%= data.cd_player %></td>
+            </tr>
 
-<section class="footer">
-  
-  <div class="footer-content">
-    <div class="footer-lists">
-<div>
-  <p>TERMS AND CONDITIONS</p>
-  <a>- Privacy policies</a>
-  <a>- Terms of use</a>
-</div>
+            <tr>
+              <th>Heated Exterior Mirrors</th>
+              <td><%= data.heated_exterior_mirror %></td>
+            </tr>
+            
+            <tr>
+              <th>Airbag</th>
+              <td><%= data.driverAirbag %></td>
+            </tr>
 
-<div>
-  <p>ABOUT US</p>
-  <a>- What's MotoDial?</a>
-  <a>- Services and features</a>
-  <a>- Commom question</a>
-  <a>- Contact information</a>
-</div>
+            
+            <tr>
+              <th>Parking Aid</th>
+              <td><%= data.parkingAid %></td>
+            </tr>
 
-<div>
-   <img src="logo.png">
+            <tr>
+              <th>Cruise Control</th>
+              <td><%= data.cruise_control %></td>
+            </tr>
+
+            <tr>
+              <th>Fog Lights</th>
+              <td><%= data.fogLights %></td>
+            </tr>
+
+            <tr>
+              <th>Heated Seats</th>
+              <td><%= data.heated_seat %></td>
+            </tr>
+
+            <tr>
+              <th>navigation aid</th>
+              <td><%= data.navigation_aid %></td>
+            </tr>
+
+            <tr>
+              <th>Keyless Entry</th>
+              <td><%= data.keyless_entry %> </td>
+          </tr>
+          </table>
+
+          <form action="/myCars" method="POST">
+            <input name="vin" value="<%=data.vin %>" class="hidden" />
+
+            <input name="make" value="<%= data.make %>" class="hidden" />
+
+            <input name="model" value="<%= data.model %>" class="hidden" />
+
+            <input name="year" value="<%= data.year %>" class="hidden" />
+
+            <input name="price" value="<%= data.price %>" class="hidden" />
+
+            <input name="seats" value="<%= data.seats %>" class="hidden" />
+
+            <input name="style" value="<%= data.style %>" class="hidden" />
+
+            <input name="engine" value="<%= data.engine%>" class="hidden" />
+
+            <input name="madeIn" value="<%= data.madeIn %>" class="hidden" />
+
+            <input
+              name="fuelCapacity"
+              value="<%= data.fuelCapacity %>"
+              class="hidden"
+            />
+
+            <input
+              name="fuelInternal"
+              value="<%= data.fuelInternal %>"
+              class="hidden"
+            />
+
+            <input
+              name="fuelExternal"
+              value="<%= data.fuelExternal %>"
+              class="hidden"
+            />
+
+            <input
+              name="transmission"
+              value="<%= data.transmission%>"
+              class="hidden"
+            />
+
+            <input
+              name="alloy_wheels"
+              value="<%= data.alloy_wheels %>"
+              class="hidden"
+            />
+
+            <input
+              name="automatic_headlights"
+              value="<%= data.automatic_headlights %>"
+              class="hidden"
+            />
+
+            <input
+              name="cd_player"
+              value="<%= data.cd_player %>"
+              class="hidden"
+            />
+
+            <input
+              name="child_safety_door_locks"
+              value="<%= data.child_safety_door_locks %>"
+              class="hidden"
+            />
+
+            <input
+              name="fogLights"
+              value="<%= data.fogLights %>"
+              class="hidden"
+            />
+
+            <input
+              name="cruise_control"
+              value="<%= data.cruise_control %>"
+              class="hidden"
+            />
+
+            <input
+              name="driverAirbag"
+              value="<%= data.driverAirbag %>"
+              class="hidden"
+            />
+
+            <input
+              name="passenger_airbag"
+              value="<% data.passenger_airbag %>"
+              class="hidden"
+            />
+
+            <input
+              name="cooled_seat"
+              value="<%= data.cooled_seat %>"
+              class="hidden"
+            />
+
+            <input
+              name="heated_seat"
+              value="<%= data.heated_seat %>"
+              class="hidden"
+            />
+
+            <input
+              name="parkingAid"
+              value="<%= data.parkingAid %>"
+              class="hidden"
+            />
+
+            <input
+              name="genuine_wood_trim"
+              value="<%= data.genuine_wood_trim %>"
+              class="hidden"
+            />
+
+            <input
+              name="heated_exterior_mirror"
+              value="<%= data.heated_exterior_mirror %>"
+              class="hidden"
+            />
+
+            <input
+              name="heated_steering_wheel"
+              value="<%= data.heated_steering_wheel %>"
+              class="hidden"
+            />
+
+            <input
+              name="keyless_entry"
+              value="<%= data.keyless_entry %>"
+              class="hidden"
+            />
+
+            <input
+              name="leather_seat"
+              value="<%= data.leather_seat %>"
+              class="hidden"
+            />
+
+            <input
+              name="navigation_aid"
+              value="<%= data.navigation_aid %>"
+              class="hidden"
+            />
+
+            <input
+              name="power_windows"
+              value="<%= data.power_windows %>"
+              class="hidden"
+            />
+
+          </form>
+        </section>
+        </section>
+        
+<footer>
   <div>
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="google"><i class="fa fa-google"></i></a>
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
   </div>
-</div>
-</div>
+  
+  <div  class="copy-right">
+    <p>Copyright 2021 &copy; All Rights Reserved</p>
+  </div>
+  </footer>
 
-<div  class="copy-right">
-  <p>Copyright 2021 &copy; All Rights Reserved</p>
-</div>
-
-</div>
-</section>
+      </section>
 
 
 
-</section>
-</main>
+      <section class="blue-section">
+        <svg class="radial-progress" data-percentage="82" viewBox="0 0 80 80">
+          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+          <circle
+            class="complete"
+            cx="40"
+            cy="40"
+            r="35"
+            style="stroke-dashoffset: 39.58406743523136"
+          ></circle>
+          <text
+            class="percentage"
+            x="50%"
+            y="57%"
+            transform="matrix(0, 1, -1, 0, 80, 0)"
+          >
+            6.0L
+          </text>
+        </svg>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="app.js"></script>
-</body>
+        <svg class="radial-progress" data-percentage="42" viewBox="0 0 80 80">
+          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+          <circle
+            class="complete"
+            cx="40"
+            cy="40"
+            r="35"
+            style="stroke-dashoffset: 39.58406743523136"
+          ></circle>
+          <text
+            class="percentage"
+            x="50%"
+            y="57%"
+            transform="matrix(0, 1, -1, 0, 80, 0)"
+          >
+            12 mi/gal
+          </text>
+        </svg>
+
+        <svg class="radial-progress" data-percentage="62" viewBox="0 0 80 80">
+          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+          <circle
+            class="complete"
+            cx="40"
+            cy="40"
+            r="35"
+            style="stroke-dashoffset: 39.58406743523136"
+          ></circle>
+          <text
+            class="percentage"
+            x="50%"
+            y="57%"
+            transform="matrix(0, 1, -1, 0, 80, 0)"
+          >
+            24.00 gal
+          </text>
+        </svg>
+
+        <svg class="radial-progress" data-percentage="72" viewBox="0 0 80 80">
+          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+          <circle
+            class="complete"
+            cx="40"
+            cy="40"
+            r="35"
+            style="stroke-dashoffset: 39.58406743523136"
+          ></circle>
+          <text
+            class="percentage"
+            x="50%"
+            y="57%"
+            transform="matrix(0, 1, -1, 0, 80, 0)"
+          >
+            24.00 gal
+          </text>
+        </svg>
+
+        <p class="data1"><span>Engine</span> <br />6.0L W12 DOHC 48V TURBO</p>
+        <p class="data2"><span>Fuel Internal</span> <br />12 mi/gal</p>
+        <p class="data3">
+          <span>Fuel Capacity</span> <br />
+          24.00 gallon
+        </p>
+
+        <h3>Bentley Continental GT</h3>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+    <script src="ring.js"></script>
+  </body>
 </html>

@@ -31,29 +31,6 @@ function Type() {
 	}
 }
 
-// Implements deleting effect
-function Delete() {
-	let text =  contenet[part].substring(0, partIndex - 1);
-	element.innerHTML = text;
-	partIndex--;
 
-	// If sentence has been deleted then start to display the next sentence
-	if(text === '') {
-		clearInterval(intervalValue);
 
-		// If last sentence then display the first one, else move to the next
-		if(part == (contenet.length - 1))
-			part = 0;
-		else
-			part++;
-		partIndex = 0;
 
-		// Start to display the next sentence after some time
-		setTimeout(function() {
-			intervalValue = setInterval(Type, 100);
-		}, 200);
-	}
-}
-
-// Start the typing effect on load
-intervalValue = setInterval(Type, 100);

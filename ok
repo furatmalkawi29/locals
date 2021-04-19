@@ -1,0 +1,42 @@
+
+  
+  <p>
+    <!-- Result For : <%=data.vin %> -->
+</p>
+
+<h3>
+    <!-- Make: <%= data.make %> -->
+</h3>
+
+<h3>
+    <!-- Model: <%= data.model %> -->
+</h3>
+
+<h3>
+    <!-- Year: <%= data.year %> -->
+</h3>
+
+<h3>
+    <!-- Suggested Price: <%= data.price %> -->
+</h3>
+
+<h3>
+    <!-- Number Of Seats: <%= data.seats %> -->
+</h3>
+
+<h3>
+    <!-- Car Body : <%= data.style %> -->
+</h3>
+
+
+<section class="engine">
+
+    <h3>
+        <!-- <%= data.engine%> -->
+    </h3>
+
+</section>
+
+<h2>
+    <!-- About The Car: -->
+</h2>
