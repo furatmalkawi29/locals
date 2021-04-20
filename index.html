@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet"><link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="spec.css" />
+    <link rel="stylesheet" href="obd.css">
     <title>Document</title>
   </head>
 
@@ -17,8 +19,7 @@
 
   <body>
     <main>
-      <img class="car" src="images2/boghati5.png" />
-
+      
       <section class="content">
 
         <header>
@@ -32,45 +33,40 @@
           </nav>
         </header>
 
+
         <section class="sudo-main">
 
-          <h1>Car History</h1>
+          <h1>OBD Diagnosis</h1>
 
           <div>
-            <p><%=data.vin %></p>
+            <form action="/myMalfunctionList" method="POST">
+  
+              <input name="code" value="<%= data.code %>" class="hidden">
+              <input name="diagnosis" value="<%= data.diagnosis %>" class="hidden">
+              <input name="date" value="<%= data.date %>" class="hidden">
+  
+              <button type="submit"> Save OBD Code </button>
+  
+          </form>
           </div>
 
           <section class="tables">  
+
           <table>
             <tr>
-              <th>Odometer Reading</th>
-              <td> <%= report.odometer %> <%= report.odometerUnit %></td>
+              <th>Results for</th>
+              <td> <%= data.code %></td>
             </tr>
             
 
             <tr>
-              <th>Status</th>
-              <td><%= report.status %></td>
+              <th> Discovered Issue</th>
+              <td><%= data.diagnosis %></td>
             </tr>
 
             <tr>
-              <th>Reporting Company</th>
-              <td><%= report.reportingCompany %></td>
-            </tr>
-
-            <tr>
-              <th>Last Insurance Company</th>
-              <td><%= report.insurance%></td>
-            </tr>
-
-            <tr>
-              <th><%=report.insurance%> Email</th>
-              <td><%= report.insuranceEmail %></td>
-            </tr>
-            
-            <tr>
-              <th><%=report.insurance%> Phone</th>
-              <td><%= report.insurancePhone %></td>
+              <th>Date</th>
+              <td><%= data.date %></td>
             </tr>
 
           </table>
@@ -95,88 +91,23 @@
 
 
       <section class="blue-section">
-        <svg class="radial-progress" data-percentage="82" viewBox="0 0 80 80">
-          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-          <circle
-            class="complete"
-            cx="40"
-            cy="40"
-            r="35"
-            style="stroke-dashoffset: 39.58406743523136"
-          ></circle>
-          <text
-            class="percentage"
-            x="50%"
-            y="57%"
-            transform="matrix(0, 1, -1, 0, 80, 0)"
-          >
-            6.0L
-          </text>
-        </svg>
+        <!-- shapes: -->
+      <img class="dot" src="patteren3.png">
+      <img class="man" src="man3.png">
+      <img class="tech" src="art2.png" />
+      <img class="tech2" src="art4.png" />
+      <div class="circle"></div>
 
-        <svg class="radial-progress" data-percentage="42" viewBox="0 0 80 80">
-          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-          <circle
-            class="complete"
-            cx="40"
-            cy="40"
-            r="35"
-            style="stroke-dashoffset: 39.58406743523136"
-          ></circle>
-          <text
-            class="percentage"
-            x="50%"
-            y="57%"
-            transform="matrix(0, 1, -1, 0, 80, 0)"
-          >
-            12 mi/gal
-          </text>
-        </svg>
+      <!-- port view -->
+      <div class="code">
+        <h4>P</h4>
+        <h4>0</h4>
+        <h4>1</h4>
+        <h4>3</h4>
+        <h4>0</h4>
+        <h4>5</h4>
+      </div>
 
-        <svg class="radial-progress" data-percentage="62" viewBox="0 0 80 80">
-          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-          <circle
-            class="complete"
-            cx="40"
-            cy="40"
-            r="35"
-            style="stroke-dashoffset: 39.58406743523136"
-          ></circle>
-          <text
-            class="percentage"
-            x="50%"
-            y="57%"
-            transform="matrix(0, 1, -1, 0, 80, 0)"
-          >
-            24.00 gal
-          </text>
-        </svg>
-
-        <svg class="radial-progress" data-percentage="72" viewBox="0 0 80 80">
-          <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-          <circle
-            class="complete"
-            cx="40"
-            cy="40"
-            r="35"
-            style="stroke-dashoffset: 39.58406743523136"
-          ></circle>
-          <text
-            class="percentage"
-            x="50%"
-            y="57%"
-            transform="matrix(0, 1, -1, 0, 80, 0)"
-          >
-            24.00 gal
-          </text>
-        </svg>
-
-        <p class="data1"><span>Engine</span> <br />6.0L W12 DOHC 48V TURBO</p>
-        <p class="data2"><span>Fuel Internal</span> <br />12 mi/gal</p>
-        <p class="data3">
-          <span>Fuel Capacity</span> <br />
-          24.00 gallon
-        </p>
       </section>
     </main>
 
