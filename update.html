@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="update.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+    </header>
+
+    <main>
+
+        <div class="form-style-10">
+            <h1>Edit Car Information</h1>
+        <form action="/updateCar/<%= data.id %>?_method=PUT" method="POST">
+
+            <div class="section"><span>1</span>Car Specifications</div>
+            <div class="inner-wrap">
+                <label for="make">Make</label>
+             <input name="make" value="<%= data.make %>"> 
+ 
+             <label for="">Model</label>
+            <input name="model" value="<%= data.model %>">
+
+            <label for="">Year</label>
+            <input name="year" value="<%= data.year %>"> 
+
+            <label for="">Price</label>
+
+             <input name="price" value="<%= data.price %>"> 
+             </div>
+
+             <div class="section"><span>2</span>Car Equipment & Options</div>
+
+             <div class="inner-wrap">
+                <label for="">Seats Number</label>
+
+             <input name="seats" value="<%= data.seats %>"> 
+
+             <label for="">Car Body</label>
+
+             <input name="style" value="<%= data.style %>"> 
+
+             <label for="">Engine</label>
+
+             <input name="engine" value="<%= data.engine%>"> 
+
+             <label for="">Made In</label>
+
+             <input name="madeIn" value="<%= data.madein %>"> 
+ 
+             <label for="">Fuel Capacity</label>
+
+            <input name="fuelCapacity" value="<%= data.fuelcapacity %>">
+
+            <label for="fuelInternal">Fuel Internal</label>
+
+            <input name="fuelInternal" value="<%= data.fuelinternal %>"> 
+
+            <label for="transmission">Transmission</label>
+
+             <input name="transmission" value="<%= data.transmission%>"> 
+
+             <label for="cd_player">CD Player</label>
+
+             <input name="cd_player" value="<%= data.cd_player %>"> 
+
+             <label for="child_safety_door_locks">Door Locks</label>
+
+             <input name="child_safety_door_locks" value="<%= data.child_safety_door_locks %>"> 
+
+             <label for="fogLights">Fog Lights</label>
+
+             <input name="fogLights" value="<%= data.foglights %>"> 
+
+             <label for="cruise_control">Cruise Control</label>
+
+             <input name="cruise_control" value="<%= data.cruise_control %>"> 
+
+             <label for="driverAirbag">Driver Airbag</label>
+
+             <input name="driverAirbag" value="<%= data.driverairbag %>"> 
+
+             <label for="parkingAid">Parking Aid</label>
+
+             <input name="parkingAid" value="<%= data.parkingaid %>"> 
+
+             <label for="heated_exterior_mirror">Heated Exterior Mirror</label>
+
+            <input name="heated_exterior_mirror" value="<%= data.heated_exterior_mirror %>">
+
+            <label for="keyless_entry">Keyless Entry</label>
+
+            <input name="keyless_entry" value="<%= data.keyless_entry %>">
+
+            <label for="navigation_aid">Navigation Aid</label>
+
+            <input name="navigation_aid" value="<%= data.navigation_aid %>">
+            </div>
+
+            <div class="button-section">
+            <button type="submit"> Update Car Details </button>
+            <form class="deleteForm" action="/updateCar/<%= data.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="ud_btn">Remove From Garage</button>
+            </form>
+            </div>
+
+        </form>
+    </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
