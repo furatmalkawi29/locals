@@ -1,121 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet"><link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="obd.css">
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="base.css">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <!-- -----------------------------header -->
+<header>
+  <img src="logo.png">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Car Search</a>
+    <a href="#">OBD</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- ----------------------------- hero -->
+
+<section class="hero"> 
+<h1>MotoDial</h1>
+<h2>The best way to get vehicle  
+  <div id="container">
+	<div id="text"></div>
+  </div></h2>
+</section>
+
+<img class="tri" src="ok.png">
+
+<!-- -----------------------------main content -->
+<section class="suduMain">
+
+<!-- ---------------------- What services does MoroDial Provide you? -->
+
+<section class="motoDial_Info">
+  <article>
+<p> Let's Introduce MotoDial </p>
+<p>Car owner's first tools to provide vehicle specs, market value, history and more! . We provide you information that are hard to get in the most simple, efficient, elegent way possible . The possibilities are endless. From tracking vehicle analytics in your company, energy, insurance, media, ride hailing </p>
+</article>
+<img src="blue car.png" alt="">
+
+</section>
+
+
+<section class="features">
+  <div class="background-sec">
+    <p>Our services</p>
+    <div class="icons">
+
+
+<div class="card">
+  <div class="heading">
+  <div><img src="spec.png" alt=""></div>
+  <p>VEHICLE SPEC</p>
+</div>
+
+  <p>Get robust vehicle specification data on color options, attributes, equipment details, recall information, warranties</p>
+  <button><a href="">Start</a></button>
+</div>
 
 
 
-  <body>
-    <main>
-      
-      <section class="content">
+<div class="card">
+  <div class="heading">
+  <div><img src="history.png" alt=""></div>
+  <p>VEHICLE HISTORY</p>
+</div>
 
-        <header>
-          <img src="logo.png" />
-          <nav>
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Car Search</a>
-            <a href="#">OBD</a>
-            <a href="#">Contact</a>
-          </nav>
-        </header>
+  <p>Get access to a comprehensive set of history records for used and new cars by VIN based on sales data stored in database. </p>
+  <button><a href="history.html">Start</a></button>
+</div>
 
 
-        <section class="sudo-main">
 
-          <h1>OBD Diagnosis</h1>
+<div class="card">
+  <div class="heading">
+  <div><img src="obd.png" alt=""></div>
+  <p>OBD DIAGNOSIS</p>
+</div>
 
-          <div>
-            <form action="/myMalfunctionList" method="POST">
+  <p> We provide you with a system that reports diagnostic trouble codes, efficiantly rising up the issue using your OBD code . </p>
+  <button><a href="">Start</a></button>
+</div>
+
+
+
+
+<div class="card">
+  <div class="heading">
+  <div><img src="map.png" alt=""></div>
+  <p> SERVICE STATIONS</p>
+  </div>
+
+  <p>You can look for the best nearby car services stations by just providing your location.  .</p>
+  <button><a href="">Start</a></button>
+</div>
+
+
+    </div>
+  </div>
+</section> 
+
+
+<!-- <section class="vedio">
+    <video width=100% height="1000" autoplay muted loop>
+        <source src="assets/welcometojordan.webm">
+    </video>
+</section>
+ -->
+
+
+<section class="footer">
   
-              <input name="code" value="<%= data.code %>" class="hidden">
-              <input name="diagnosis" value="<%= data.diagnosis %>" class="hidden">
-              <input name="date" value="<%= data.date %>" class="hidden">
-  
-              <button type="submit"> Save OBD Code </button>
-  
-          </form>
-          </div>
+  <div class="footer-content">
+    <div class="footer-lists">
+<div>
+  <p>TERMS AND CONDITIONS</p>
+  <a>- Privacy policies</a>
+  <a>- Terms of use</a>
+</div>
 
-          <section class="tables">  
+<div>
+  <p>ABOUT US</p>
+  <a>- What's MotoDial?</a>
+  <a>- Services and features</a>
+  <a>- Commom question</a>
+  <a>- Contact information</a>
+</div>
 
-          <table>
-            <tr>
-              <th>Results for</th>
-              <td> <%= data.code %></td>
-            </tr>
-            
-
-            <tr>
-              <th> Discovered Issue</th>
-              <td><%= data.diagnosis %></td>
-            </tr>
-
-            <tr>
-              <th>Date</th>
-              <td><%= data.date %></td>
-            </tr>
-
-          </table>
-        </section>
-        </section>
-        
-<footer>
+<div>
+   <img src="logo.png">
   <div>
-    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-    <a href="#" class="google"><i class="fa fa-google"></i></a>
-    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
   </div>
-  
-  <div  class="copy-right">
-    <p>Copyright 2021 &copy; All Rights Reserved</p>
-  </div>
-  </footer>
+</div>
+</div>
 
-      </section>
+<div  class="copy-right">
+  <p>Copyright 2021 &copy; All Rights Reserved</p>
+</div>
+
+</div>
+</section>
 
 
 
-      <section class="blue-section">
-        <!-- shapes: -->
-      <img class="dot" src="patteren3.png">
-      <img class="man" src="man3.png">
-      <img class="tech" src="art2.png" />
-      <img class="tech2" src="art4.png" />
-      <div class="circle"></div>
+</section>
+</main>
 
-      <!-- port view -->
-      <div class="code">
-        <h4>P</h4>
-        <h4>0</h4>
-        <h4>1</h4>
-        <h4>3</h4>
-        <h4>0</h4>
-        <h4>5</h4>
-      </div>
-
-      </section>
-    </main>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-      crossorigin="anonymous"
-    ></script>
-    <script src="ring.js"></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app.js"></script>
+</body>
 </html>
